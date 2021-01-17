@@ -8,5 +8,7 @@ class TestGoodPage():
     def test_btn_add_good_to_cart_exists(self, browser):
         browser.get(link)
         #time.sleep(10)
-        btn_add_to_cart = len(browser.find_elements(By.CSS_SELECTOR, '.btn-add-to-basket'))
+        btn_add_to_cart = len(browser.find_elements(By.CSS_SELECTOR, 'btn.btn-lg.btn-primary.btn-add-to-basket'))
         assert btn_add_to_cart == 1, 'Элемент не найден'
+
+
